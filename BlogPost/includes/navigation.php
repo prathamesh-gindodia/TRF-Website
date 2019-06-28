@@ -56,7 +56,6 @@
 
 
 
-
                                  
                      <li>
                         <a href="/cms/registration">Registration</a>
