@@ -403,7 +403,7 @@ function register_user($username, $email, $password){
 
 
 
-             redirect("/cms/index.php");
+             redirect("index.php");
 
 
          } else {

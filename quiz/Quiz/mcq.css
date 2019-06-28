@@ -1,0 +1,86 @@
+div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
+#bt {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+	margin-left: 35%;
+}
+
+#bt1 {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+	margin-left: 45%;
+}
+
+
+#bt:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#bt1:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#re {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+	margin-left: 42%;
+}
+
+
+#re:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#test {
+	margin-left: 10px;
+	background: #6caed5;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 450px;
+
+}
+
+#main{
+	text-align: center;
+	margin-top: 75px;
+	text-decoration: underline;
+}
+
+h3{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}

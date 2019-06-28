@@ -66,6 +66,8 @@ header("location: ../index.php");
 
  <link href="css/styles.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/style-search.css">
+
  
  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 

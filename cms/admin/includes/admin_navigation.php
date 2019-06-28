@@ -77,6 +77,17 @@ if(isset($_SESSION['username'])) {
                             </li>
                         </ul>
                     </li>
+					 <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#quiz_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Quizes <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="quiz_dropdown" class="collapse">
+                            <li>
+                                <a href="/TRF/cms/admin/searchQuiz.php"> View All Quizes</a>
+                            </li>
+                            <li>
+                                <a href="/TRF/cms/admin/quiz_add.php">Add Quizes</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
