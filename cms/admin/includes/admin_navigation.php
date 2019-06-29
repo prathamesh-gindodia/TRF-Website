@@ -88,6 +88,17 @@ if(isset($_SESSION['username'])) {
                             </li>
                         </ul>
                     </li>
+					<li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#projectTable_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Project Tables <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="projectTable_dropdown" class="collapse">
+                            <li>
+                                <a href="/TRF/cms/admin/searchQuiz.php"> View All Project Tables</a>
+                            </li>
+                            <li>
+                                <a href="/TRF/cms/admin/quiz_add.php">Add Project Tables</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>

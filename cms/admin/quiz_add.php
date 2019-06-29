@@ -3,7 +3,7 @@
 
 if(isset($_POST['submit']))
 {	
- $connection = mysqli_connect("localhost", "root", "", "trfwebsite"); 
+ $connection = mysqli_connect("localhost", "root", "", "trf_website"); 
 if(!$connection)
 		echo "not connected";
  $number = count($_POST["name"]);

@@ -127,19 +127,20 @@
 <?php 
 
     if(isset($_POST['create_comment'])) {
-
+	#	session_start();
+		if(isset($_SESSION['user_id']))
+		{
         $the_post_id = $_GET['p_id'];
-        $comment_author = $_POST['comment_author'];
+        $comment_author_id = $_SESSION['user_id'];
         $comment_email = $_POST['comment_email'];
         $comment_content = $_POST['comment_content'];
 
+        if (!empty($comment_content)) {
 
-        if (!empty($comment_author) && !empty($comment_email) && !empty($comment_content)) {
 
+            $query = "INSERT INTO comments (comment_post_id, comment_author, comment_content, comment_status,comment_date)";
 
-            $query = "INSERT INTO comments (comment_post_id, comment_author, comment_email, comment_content, comment_status,comment_date)";
-
-            $query .= "VALUES ($the_post_id ,'{$comment_author}', '{$comment_email}', '{$comment_content }', 'unapproved',now())";
+            $query .= "VALUES ($the_post_id ,'{$comment_author_id}', '{$comment_content }', 'unapproved',now())";
 
             $create_comment_query = mysqli_query($connection, $query);
 
@@ -152,6 +153,11 @@
 
         }
 
+		}
+		else
+		{
+			echo "<script>alert('Please Login to Comment')</script>";
+		}
 
     }
 
@@ -174,16 +180,6 @@
             <form action="#" method="post" role="form">
 
                 <div class="form-group">
-                    <label for="Author">Author</label>
-                    <input type="text" name="comment_author" class="form-control" name="comment_author">
-                </div>
-
-                <div class="form-group">
-                    <label for="Author">Email</label>
-                    <input type="email" name="comment_email" class="form-control" name="comment_email">
-                </div>
-
-                <div class="form-group">
                     <label for="comment">Your Comment</label>
                     <textarea name="comment_content" class="form-control" rows="3"></textarea>
                 </div>
@@ -195,9 +191,11 @@
                 
                  <?php 
 
-
+			$q1 = "SELECT `username` FROM users WHERE `user_id` = {$comment_author_id}";
+			$run = mysqli_query($connection, $q1);
+			$author_name = mysqli_fetch_assoc($run);
             $query = "SELECT * FROM comments WHERE comment_post_id = {$the_post_id} ";
-            $query .= "AND comment_status = 'approved' ";
+            #$query .= "AND comment_status = 'approved' ";
             $query .= "ORDER BY comment_id DESC ";
             $select_comment_query = mysqli_query($connection, $query);
             if(!$select_comment_query) {
@@ -207,7 +205,6 @@
             while ($row = mysqli_fetch_array($select_comment_query)) {
             $comment_date   = $row['comment_date']; 
             $comment_content= $row['comment_content'];
-            $comment_author = $row['comment_author'];
                 
                 ?>
                 
@@ -219,7 +216,7 @@
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading"><?php echo $comment_author;   ?>
+                        <h4 class="media-heading"><?php echo $author_name['username'];   ?>
                             <small><?php echo $comment_date;   ?></small>
                         </h4>
                         

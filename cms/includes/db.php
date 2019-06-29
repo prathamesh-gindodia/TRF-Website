@@ -3,7 +3,7 @@
 $db['db_host'] = "localhost";
 $db['db_user'] = "root";
 $db['db_pass'] = "";
-$db['db_name'] = "trfwebsite";
+$db['db_name'] = "trf_website";
 
 foreach($db as $key => $value){
 define(strtoupper($key), $value);

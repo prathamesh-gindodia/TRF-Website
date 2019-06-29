@@ -400,6 +400,7 @@ function register_user($username, $email, $password){
              $_SESSION['firstname'] = $db_user_firstname;
              $_SESSION['lastname'] = $db_user_lastname;
              $_SESSION['user_role'] = $db_user_role;
+             $_SESSION['user_id'] = $db_user_id;
 
 
 
