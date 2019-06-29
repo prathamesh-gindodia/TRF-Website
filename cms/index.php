@@ -47,18 +47,19 @@
             }
 
 
-         if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin' ) {
+         /*if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin' ) {
 
-
+			echo "<h1>".$_SESSION['user_role']."</h1>";
         $post_query_count = "SELECT * FROM posts";
 
 
          } else {
+		echo "<h1>".$_SESSION['user_role']."</h1>";
+         $post_query_count = "SELECT * FROM posts WHERE `post_status` = 'published'";
 
-         $post_query_count = "SELECT * FROM posts WHERE post_status = 'published'";
+         }*/   
 
-         }   
-
+		$post_query_count = "SELECT * FROM posts WHERE `post_status` = 'published'";
         $find_count = mysqli_query($connection,$post_query_count);
         $count = mysqli_num_rows($find_count);
 
@@ -78,7 +79,7 @@
 
 
                 
-        $query = "SELECT * FROM posts LIMIT $page_1, $per_page";
+        $query = "SELECT * FROM posts WHERE `post_status` = 'published' LIMIT $page_1, $per_page";
         $select_all_posts_query = mysqli_query($connection,$query);
 
         while($row = mysqli_fetch_assoc($select_all_posts_query)) {
