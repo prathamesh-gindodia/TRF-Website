@@ -1,12 +1,13 @@
 
+
 <?php include "includes/admin_header.php" ?>
-<?php
-$query = "SELECT * FROM `quiz`";
+
+	<?php
+$query = "SELECT * FROM `project`";
 $run = mysqli_query($connection, $query);
 $row = mysqli_num_rows($run);
 $count = 0;
 ?>
-	
 	<div id="wrapper">
        
 
@@ -37,7 +38,9 @@ $count = 0;
 			<!--     Add ur code here         -->
 
             <div class="col-xs-12">
-              <div class="form-group pull-center col-md-5">
+				
+				
+				<div class="form-group pull-center col-md-5">
     <input type="text" class="search form-control" placeholder="Search for Quizes">
 	</div>
 	<div class="form-group pull-center">
@@ -48,11 +51,12 @@ $count = 0;
   <thead>
 		<tr>
 		  <th>Sr.No</th>
-		  <th>Quiz Name</th>
-		  <th>Quiz Discription</th>
-		  <th>Start Date</th>
-		  <th>End Date</th>
-		  <th>More Details</th>
+		  <th>Project Title</th>
+		  <th>Project Discription</th>
+		  <th>Date of publish</th>
+		  <th>Status</th>
+		  <th>Tags</th>
+		  <th>View Project</th>
 		  <th>Edit</th>
 		  <th>Delete</th>
 		</tr>
@@ -68,24 +72,21 @@ $count = 0;
 		?>
 		<tr>
 		  <th scope="row"><?php echo $count;?></th>
-		  <td><?php echo $data['quizName'];?></td>
-		  <td><?php echo $data['discription'];?></td>
-		  <td><?php echo $data['startDate'];?></td>
-		  <td><?php echo $data['endDate'];?></td>
-		  <td><a href="updateform/updateform.php?sid=<?php echo $data['quizId']; ?>">More details</a></td>
-		  <td><a href="editQuiz.php?sid=<?php echo $data['quizId']; ?>">edit</a></td>
-		  <td><a href="deleteQuiz.php?sid=<?php echo $data['quizId']; ?>">Delete</a></td>
+		  <td><?php echo $data['title'];?></td>
+		  <td><?php echo $data['description'];?></td>
+		  <td><?php echo $data['date'];?></td>
+		  <td><?php echo $data['status'];?></td>
+		  <td><?php echo $data['tags'];?></td>
+		  <td><a class='btn btn-primary' href="#">More Details</a></td>
+		  <td><a class='btn btn-info' href="editQuiz.php?sid=<?php echo $data['id']; ?>">Edit</a></td>
+		  <td><a class='btn btn-danger' href="deleteProject.php?sid=<?php echo $data['id']; ?>">Delete</a></td>
 		</tr>
 <?php } ?>
   </tbody>
 </table>
+				
 
-
-    
-			</div>
-
-
-        </div>
+            </div>
         <!-- /.row -->
 
     </div>
@@ -100,10 +101,6 @@ $count = 0;
 
 
 
-<?php 
-deleteCategories();
-
- ?>
 
   
         
@@ -112,19 +109,3 @@ deleteCategories();
         <!-- /#page-wrapper -->
         
     <?php include "includes/admin_footer.php" ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2019 at 06:50 PM
+-- Generation Time: Jun 29, 2019 at 08:07 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -99,10 +99,7 @@ INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`,
 (113, 48, 'PHP', 'Edwin Diaz', 'rico', '2017-01-30', 'image_5.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'php', '', 'published', 80),
 (114, 48, 'Javascript', 'Miguel', '', '2015-07-24', 'image_4.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'published', 19),
 (115, 48, 'Javascript', 'Edwin Diaz', '', '2015-07-24', 'image_4.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'published', 0),
-(116, 48, 'Bootstrap', 'George', '', '2015-07-24', 'image_3.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'Bootstrap', '', 'published', 4),
-(118, 48, 'Javascript', 'Edwin Diaz', '', '2015-07-24', 'image_4.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'published', 4),
-(119, 48, 'Javascript', 'Miguel', 'suave', '2017-07-12', 'image_2.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'draft', 2),
-(135, 48, 'Javascript', 'Edwin Diaz', '', '2019-06-29', 'lambo_1.jpg', '<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p>&nbsp;</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>&nbsp;</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>=</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\\\\\\\\\r\\\\\\\\\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\\\\\r\\\\\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>\\\\r\\\\n</p>\r\n<p>\\r\\n</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'published', 79),
+(118, 48, 'Javascript', 'Edwin Diaz', '', '2015-07-24', 'image_4.jpg', '<p style=\"text-align: justify; line-height: 14px; margin: 0px 0px 14px; padding: 0px; font-family: Arial, Helvetica, sans;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum fermentum pretium. Ut nec purus at est consequat pretium vitae at tortor. Morbi pulvinar lacinia arcu, non elementum leo commodo id. Mauris congue volutpat feugiat. Praesent quis ligula vel neque consectetur mollis. Mauris a ipsum a elit pharetra sodales vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae diam in diam malesuada gravida a sit amet arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc et urna eu justo ullamcorper tempus.</p>\r\n<p>&nbsp;</p>', 'javascript', '', 'published', 5),
 (136, 48, 'new post ti check draft', '', 'rico', '2019-06-29', 'image_1.jpg', '<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p><strong>ye meri post h</strong></p>\r\n<p>hfwfyugw78yfigwfiyuwgefi8wft</p>', 'javascript', '', 'draft', 1);
 
 -- --------------------------------------------------------
@@ -129,10 +126,7 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id`, `title`, `status`, `githubLink`, `photo`, `teamdid`, `likes`, `date`, `tags`, `description`) VALUES
-('1', 'hello', 'work', 'shdadbh', NULL, '1', 0, '2019-06-25', '1,2', ''),
-('2', 'bye', 'shsh', 'fjdjd', NULL, '3', 0, '2019-06-07', '1,2', ''),
-('4', 'we are good', 'on going', 'https:', NULL, '7', 0, '2019-06-18', '1,3', ''),
-('4', 'teri', 'gg', 'ggg', NULL, '1,4,5', 0, '2019-06-04', '1,2', '3rfjerjfhjkefkjhfu4f 4fbbkjfnjnf4fnjkf fkjn\r\njebjkfebkjfjknfrkfn 4nknkefnknfkwrlfnkrfnkjfn');
+('1', 'new', 'completed', 'abc', NULL, '', 0, '2019-06-11', '', 'prathamesh');
 
 -- --------------------------------------------------------
 
@@ -154,7 +148,8 @@ CREATE TABLE `quiz` (
 
 INSERT INTO `quiz` (`quizId`, `quizName`, `discription`, `startDate`, `endDate`) VALUES
 ('0', 'second', '', '2019-06-03 00:00:00', '2019-06-20 10:15:31'),
-('1', 'prathamesh', 'hayvz xggsb ', '2019-06-12 12:22:00', '2019-06-07 12:02:00');
+('1', 'prathamesh', 'hayvz xggsb ', '2019-06-12 12:22:00', '2019-06-07 12:02:00'),
+('5d179e5e10', 'prathamesh gindodia', 'latest quiz added', '2019-06-13 05:04:00', '2019-06-12 05:05:00');
 
 -- --------------------------------------------------------
 
@@ -185,7 +180,9 @@ INSERT INTO `quizquestion` (`quizId`, `questionId`, `questions`, `optionA`, `opt
 ('0', 154, 'h3', 'a', 'b', 'c', 'd', 'b'),
 ('0', 155, 'new5', 'tfyghjk', 'tfyguhi', 'ytguio', '98ytr', 'd'),
 ('5d16261088cbb', 156, 'jhweuhf', 'ojdiugg', 'ckxn', 'dsio', 'xijhi', 'b'),
-('5d16261088cbb', 157, 'sdioj', 'dju', 'dop', 'diyifhreiuej', 'ruih', 'a');
+('5d16261088cbb', 157, 'sdioj', 'dju', 'dop', 'diyifhreiuej', 'ruih', 'a'),
+('5d179e5e109f9', 158, 'hii', 'a', 'b', 'c', 'd', 'a'),
+('5d179e5e109f9', 159, 'hii2', 'a2', 'b2', 'c2', 'd2', 'b');
 
 -- --------------------------------------------------------
 
@@ -239,6 +236,8 @@ INSERT INTO `tags` (`id`, `name`) VALUES
 CREATE TABLE `users` (
   `user_id` int(3) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `Branch` varchar(100) NOT NULL,
+  `Year` varchar(100) NOT NULL,
   `user_password` varchar(255) NOT NULL,
   `user_firstname` varchar(255) NOT NULL,
   `user_lastname` varchar(255) NOT NULL,
@@ -253,11 +252,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`, `token`) VALUES
-(1, 'rico', '$2y$12$19ZpnAkuhoaAFH7dclUGy.WFIL84PJ8AS216azZtXALy6sqexsScC', '', '', 'rico@gmail.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22', ''),
-(2, 'suave', '$2y$12$jG3YUwNt3X39OB.YJd311O9akwOw17N4e1NQ79N2xrojC5NG3Na3S', '', '', 'edwin@codingfaculty.com', '', 'admin', '$2y$10$iusesomecrazystrings22', ''),
-(3, 'pg123', '12', 'pratham', 'gindodia', 'aiud@njsdk', '', 'admin', '$2y$10$iusesomecrazystrings22', ''),
-(0, 'pratham', '$2y$12$y5dh5AgnO6hN5Tchdjlac.yMHvUyCjuEU7ohRHNGIud/wKYat01e.', '', '', 'kk@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22', '');
+INSERT INTO `users` (`user_id`, `username`, `Branch`, `Year`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`, `token`) VALUES
+(1, 'rico', '', '', '$2y$12$19ZpnAkuhoaAFH7dclUGy.WFIL84PJ8AS216azZtXALy6sqexsScC', '', '', 'rico@gmail.com', '', 'subscriber', '$2y$10$iusesomecrazystrings22', ''),
+(2, 'suave', '', '', '$2y$12$jG3YUwNt3X39OB.YJd311O9akwOw17N4e1NQ79N2xrojC5NG3Na3S', '', '', 'edwin@codingfaculty.com', '', 'admin', '$2y$10$iusesomecrazystrings22', ''),
+(3, 'pg123', '', '', '12', 'pratham', 'gindodia', 'aiud@njsdk', '', 'admin', '$2y$10$iusesomecrazystrings22', ''),
+(0, 'pratham', '', '', '$2y$12$y5dh5AgnO6hN5Tchdjlac.yMHvUyCjuEU7ohRHNGIud/wKYat01e.', '', '', 'kk@gmail.com', '', 'admin', '$2y$10$iusesomecrazystrings22', '');
 
 -- --------------------------------------------------------
 
@@ -303,7 +302,7 @@ INSERT INTO `users_online` (`id`, `session`, `time`) VALUES
 (68, 'gpmjj7n3p7gkr5q6766cvci67l', 1561798676),
 (69, 'bfu3po17fbjbf4gmirg0lnmkha', 1561800982),
 (70, 'h09s649pda4p8645o04alkt3g8', 1561801089),
-(71, 'kga4kjcq327s7jcld9hggbj0a4', 1561826847);
+(71, 'kga4kjcq327s7jcld9hggbj0a4', 1561831636);
 
 --
 -- Indexes for dumped tables
@@ -371,7 +370,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `quizquestion`
 --
 ALTER TABLE `quizquestion`
-  MODIFY `questionId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `questionId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT for table `users_online`

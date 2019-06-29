@@ -89,13 +89,13 @@ if(isset($_SESSION['username'])) {
                         </ul>
                     </li>
 					<li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#projectTable_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Project Tables <i class="fa fa-fw fa-caret-down"></i></a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#projectTable_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Project <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="projectTable_dropdown" class="collapse">
                             <li>
-                                <a href="/TRF/cms/admin/searchQuiz.php"> View All Project Tables</a>
+                                <a href="/TRF/cms/admin/searchProject.php"> View All Project</a>
                             </li>
                             <li>
-                                <a href="/TRF/cms/admin/quiz_add.php">Add Project Tables</a>
+                                <a href="/TRF/cms/admin/addProject.php">Add New Project</a>
                             </li>
                         </ul>
                     </li>
