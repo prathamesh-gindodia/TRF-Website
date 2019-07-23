@@ -1,5 +1,5 @@
 <?php
-	require('database_connection.php'); 
+	require('../cms/includes/db.php'); 
 	session_start();
 ?>
 <html>
@@ -64,7 +64,7 @@ $_SESSION['title_project']="";
 						$row = mysqli_fetch_array($r);
 						if($i==$count)
 						 	{
-						 				$tag_project=$tag_project. $row['id'];
+						 				$tag_project=$tag_project. $row['id']. ",";
 						 				
 												
 						}
@@ -96,10 +96,10 @@ $_SESSION['title_project']="";
 										{ 		
   											$link = $row['title'];
 												?>
-											<a href="display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
+											<a href="project_display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
 											<?php				
 											echo "<br>";
-					         			echo "Team id-".$row['id'];//printing
+					         			//echo "Team id-".$row['id'];//printing
 											echo "<br>";
 											echo "<br>";
 										}	
@@ -123,10 +123,10 @@ $_SESSION['title_project']="";
 											{
 												$link = $row['title'];
 													 	?>
-												<a href="display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
+												<a href="project_display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
 											<?php	
 												echo "<br>";
-					         				echo "Team id-".$row['id'];
+					         				//echo "Team id-".$row['id'];
 												echo "<br>";
 												echo "<br>";
 												
@@ -150,6 +150,7 @@ $_SESSION['title_project']="";
 	 					$l=0;
 						$ids = explode(',', $string);//creating logic for tag checking
 						$d=count($ids);
+						$d=$d-1;
 						
 						$query11="SELECT * FROM project WHERE 1";
 						$result11 = mysqli_query($con,$query11);
@@ -171,10 +172,10 @@ $_SESSION['title_project']="";
 								 		{
 								 			$link = $row11['title'];
 								 				?>
-								 			<a href="display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
+								 			<a href="project_display.php?link=<?php echo $link; ?>"><?php echo $link; ?></a>	
 											<?php	
 											echo "<br>";
-					         			echo "Team id-".$row11['id'];
+					         			//echo "Team id-".$row11['id'];
 											echo "<br>";
 											echo "<br>";
 											$k=TRUE;
