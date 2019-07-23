@@ -17,18 +17,18 @@
                 <li><a href="">Users Online: <span class="usersonline"></span></a></li>
 
                <li><a href="../index.php">HOME SITE</a></li>
-               
-               
-               
-    
+
+
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
-                    
+
 <?php
 
 if(isset($_SESSION['username'])) {
 
-    
+
     echo $_SESSION['username'];
 
 
@@ -38,15 +38,15 @@ if(isset($_SESSION['username'])) {
 
 
 ?>
-                                    
-                    
-                    
+
+
+
                     <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                           
-                           
-                           
+
+
+
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li class="divider"></li>
@@ -56,16 +56,16 @@ if(isset($_SESSION['username'])) {
                     </ul>
                 </li>
             </ul>
-            
-            
-            
+
+
+
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
                         <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
-                
+
                      <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="posts_dropdown" class="collapse">
@@ -81,10 +81,10 @@ if(isset($_SESSION['username'])) {
                         <a href="javascript:;" data-toggle="collapse" data-target="#quiz_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Quizes <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="quiz_dropdown" class="collapse">
                             <li>
-                                <a href="/TRF/cms/admin/searchQuiz.php"> View All Quizes</a>
+                                <a href="./searchQuiz.php"> View All Quizes</a>
                             </li>
                             <li>
-                                <a href="/TRF/cms/admin/quiz_add.php">Add Quizes</a>
+                                <a href="./quiz_add.php">Add Quizes</a>
                             </li>
                         </ul>
                     </li>
@@ -92,21 +92,21 @@ if(isset($_SESSION['username'])) {
                         <a href="javascript:;" data-toggle="collapse" data-target="#projectTable_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Project <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="projectTable_dropdown" class="collapse">
                             <li>
-                                <a href="/TRF/cms/admin/searchProject.php"> View All Project</a>
+                                <a href="./searchProject.php"> View All Project</a>
                             </li>
                             <li>
-                                <a href="/TRF/cms/admin/addProject.php">Add New Project</a>
+                                <a href="./addProject.php">Add New Project</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
-                   
+
                     <li class="">
                         <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments</a>
                     </li>
-                    
+
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
@@ -118,18 +118,17 @@ if(isset($_SESSION['username'])) {
                             </li>
                         </ul>
                     </li>
-                    
+
                     <li>
                         <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
                     </li>
-                    
-                    
-                    
+
+
+
                 </ul>
             </div>
-            
-            
-            
+
+
+
             <!-- /.navbar-collapse -->
         </nav>
-        
