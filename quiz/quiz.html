@@ -1,0 +1,341 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="quiz_style.css"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="current_question()">
+    <div  class="container">
+        
+        <div class="row">
+            
+            <div class="col-md-8">
+                
+                <div class="timer">
+                    
+                    <h1>00:00:00</h1>
+                
+                </div>
+                
+                <div class="ques">
+                    <h2>Q <span id="question_num">01</span>) <span id="question_title"></span></h2>
+                    <div class="left_option">
+                        
+                            <input type="radio" name="option" id="a"  value="a">
+                            <label class="op"></label>
+                    </div>
+                    <div class="left_option">
+                            <input type="radio" name="option" id="b"  value="b">
+                            <label class="op"></label>
+                        <br>
+                    </div>
+                    <div class="left_option">
+                            <input type="radio" name="option" id="c"  value="c">
+                            <label class="op"></label>
+                    </div>
+                    <div class="left_option">
+                            <input type="radio" name="option" id="d"  value="d">
+                            <label class="op"></label>
+                        <br>
+                    </div>
+                    
+                    
+                    
+                    
+                    <button type="submit" id="prev" onclick="prevFunction()">Previous</button>
+                    <button type="submit" id="review" onclick="markFunction()">Mark for Review</button>
+                    <button type="submit" id="next" onclick="nextFunction()">Next</button>
+                </div>
+                
+                <div>
+                    <button type="submit" class="submit_btn" onclick="submitFunction()">SUBMIT</button>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="quiz-title">
+                    <h3 style="text-align: center">QUIZ TITLE</h3>
+                </div>
+                <div class="num">
+                    <button class="quesno" type="button" >01</button>
+                    <button class="quesno" type="button" >02</button>
+                    <button class="quesno" type="button" >03</button>
+                    <button class="quesno" type="button" >04</button>
+                    <button class="quesno" type="button" >05</button>
+                    <button class="quesno" type="button" >06</button>
+                    <button class="quesno" type="button" >07</button>
+                    <button class="quesno" type="button" >08</button>
+                    <button class="quesno" type="button" >09</button>
+                    <button class="quesno" type="button" >10</button>
+                    <button class="quesno" type="button" >11</button>
+                    <button class="quesno" type="button" >12</button>
+                    <button class="quesno" type="button">13</button>
+                    <button class="quesno" type="button">14</button>
+                    <button class="quesno" type="button">15</button>
+                    <button class="quesno" type="button">16</button>
+                    <button class="quesno" type="button">17</button>
+                    <button class="quesno" type="button">18</button>
+                    <button class="quesno" type="button">19</button>
+                    <button class="quesno" type="button">20</button>
+                    <button class="quesno" type="button">21</button>
+                    <button class="quesno" type="button">22</button>
+                    <button class="quesno" type="button">23</button>
+                    <button class="quesno" type="button">24</button>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+</body>
+    
+<script>
+    var questions = [
+    [ " To create a linked list, we can allocate space and make something point to it, by writing: <br> struct-narne *pointer-variable; <br> Which of the following statement will correctly allocate the space", " pointer-variable= malloc(sizeof(*struct-narne)); ", "pointer-variable = malloc(sizeof(struct struct-name)); ", "pointer-variable = a!loc(sizeof(struct struct-name))","pointer-variable = alloc(sizeof(*struct-name));"],
+	[ " In a circular linked list:", "components are all linked together in some sequential manner.", "there is no beginning and no end. ", "components are arranged hierarchically.", "forward and backward traversal within the list is permitted. " ],
+	[ "What are the number of nodes of left and right subtree of the binary tree if the data is inserted in the following order: 45, 15, 8, 5 6, 5, 65, 47, 12, 18, 10, 73, 50, 16, 61", "7,6", "6,7","8,5","5,8"],
+	[ "If a node in a BST has two children, then its inorder predecessor has:", " no left child ", "no right child ", "two children", "no child" ],
+	[ "A binary tree in which if all its levels except possibly the last, have the maximum number of nodes and all the nodes at the last level appear as far left as possible, is known as:","full binary tree.","AVL tree.","threaded tree.","complete binary tree."],
+	[ "In delete operation of BST, we need inorder successor (or predecessor) of a node when the node to be deleted has both left and right child as non-empty. Which of the following is true about inorder successor needed in delete operation?","Inorder Successor is always a leaf node","Inorder successor is always either a leaf node or a node with empty left child","Inorder successor may be an ancestor of the node","Inorder successor is always either a leaf node or a node with empty right child"],["Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?","7 5 1 0 3 2 4 6 8 9","0 2 4 3 1 6 5 9 8 7","0 1 2 3 4 5 6 7 8 9","0 1 2 3 4 5 6 7 8 9"],["The following numbers are inserted into an empty binary search tree in the given order: 10, 1, 3, 5, 15, 12, 16. What is the height of the binary search tree (the height is the maximum distance of a leaf node from the root)?","2","3","4","6"],["The preorder traversal sequence of a binary search tree is 30, 20, 10, 15, 25, 23, 39, 35, 42. Which one of the following is the postorder traversal sequence of the same tree?","10, 20, 15, 23, 25, 35, 42, 39, 30","15, 10, 25, 23, 20, 42, 35, 39, 30","15, 20, 10, 23, 25, 42, 35, 39, 30","15, 10, 23, 25, 20, 35, 42, 39, 30"],["Which of the following traversals is sufficient to construct BST from given traversals 1) Inorder 2) Preorder 3) Postorder","Any one of the given three traversals is sufficient","Either 2 or 3 is sufficient","2 and 3","1 and 3"],["When searching for the key value 60 in a binary search tree, nodes containing the key values 10, 20, 40, 50, 70 80, 90 are traversed, not necessarily in the order given. How many different orders are possible in which these key values can occur on the search path from the root to the node containing the value 60?","35","64","128","5040"],[ " To create a linked list, we can allocate space and make something point to it, by writing: <br> struct-narne *pointer-variable; <br> Which of the following statement will correctly allocate the space", " pointer-variable= malloc(sizeof(*struct-narne)); ", "pointer-variable = malloc(sizeof(struct struct-name)); ", "pointer-variable = a!loc(sizeof(struct struct-name))","pointer-variable = alloc(sizeof(*struct-name));"],
+	[ " In a circular linked list:", "components are all linked together in some sequential manner.", "there is no beginning and no end. ", "components are arranged hierarchically.", "forward and backward traversal within the list is permitted. " ],
+	[ "What are the number of nodes of left and right subtree of the binary tree if the data is inserted in the following order: 45, 15, 8, 5 6, 5, 65, 47, 12, 18, 10, 73, 50, 16, 61", "7,6", "6,7","8,5","5,8"],
+	[ "If a node in a BST has two children, then its inorder predecessor has:", " no left child ", "no right child ", "two children", "no child" ],
+	[ "A binary tree in which if all its levels except possibly the last, have the maximum number of nodes and all the nodes at the last level appear as far left as possible, is known as:","full binary tree.","AVL tree.","threaded tree.","complete binary tree."],
+	[ "In delete operation of BST, we need inorder successor (or predecessor) of a node when the node to be deleted has both left and right child as non-empty. Which of the following is true about inorder successor needed in delete operation?","Inorder Successor is always a leaf node","Inorder successor is always either a leaf node or a node with empty left child","Inorder successor may be an ancestor of the node","Inorder successor is always either a leaf node or a node with empty right child"],["Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 2 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the in-order traversal sequence of the resultant tree?","7 5 1 0 3 2 4 6 8 9","0 2 4 3 1 6 5 9 8 7","0 1 2 3 4 5 6 7 8 9","0 1 2 3 4 5 6 7 8 9"],["The following numbers are inserted into an empty binary search tree in the given order: 10, 1, 3, 5, 15, 12, 16. What is the height of the binary search tree (the height is the maximum distance of a leaf node from the root)?","2","3","4","6"],["The preorder traversal sequence of a binary search tree is 30, 20, 10, 15, 25, 23, 39, 35, 42. Which one of the following is the postorder traversal sequence of the same tree?","10, 20, 15, 23, 25, 35, 42, 39, 30","15, 10, 25, 23, 20, 42, 35, 39, 30","15, 20, 10, 23, 25, 42, 35, 39, 30","15, 10, 23, 25, 20, 35, 42, 39, 30"],["Which of the following traversals is sufficient to construct BST from given traversals 1) Inorder 2) Preorder 3) Postorder","Any one of the given three traversals is sufficient","Either 2 or 3 is sufficient","2 and 3","1 and 3"],["When searching for the key value 60 in a binary search tree, nodes containing the key values 10, 20, 40, 50, 70 80, 90 are traversed, not necessarily in the order given. How many different orders are possible in which these key values can occur on the search path from the root to the node containing the value 60?","35","64","128","5040"],[ "If a node in a BST has two children, then its inorder predecessor has:", " no left child ", "no right child ", "two children", "no child" ],
+	[ "A binary tree in which if all its levels except possibly the last, have the maximum number of nodes and all the nodes at the last level appear as far left as possible, is known as:","full binary tree.","AVL tree.","threaded tree.","complete binary tree."]
+        
+];
+
+    
+    var rad_ans = [];
+    for(var r=0; r<20; r++){
+        rad_ans[r] = 0;
+    }
+    var quesnums = document.getElementsByClassName("quesno");
+    var current_ques = document.getElementById("question_num");
+    
+    
+    for (var i=0; i<quesnums.length; i++){
+        
+        
+        quesnums[i].addEventListener('click',function(){
+            
+            for(var j=0; j<quesnums.length; j++){
+                
+            if(current_ques.innerHTML==quesnums[j].innerHTML){
+                
+                var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                            if(quesnums[j].style.backgroundColor!="aquamarine"){
+
+                                quesnums[j].style.backgroundColor="green";
+                                quesnums[j].style.borderColor="black";
+                                quesnums[j].style.color="black";
+                            }
+                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        break;
+                    }
+                }
+                
+                
+                if(quesnums[j].style.backgroundColor!="green" && quesnums[j].style.backgroundColor!="aquamarine"){
+                    
+                    quesnums[j].style.backgroundColor="#E83C1E";
+                    quesnums[j].style.borderColor="black";
+                    quesnums[j].style.color="black";
+                }
+            }
+        }
+            for (var t=0; t<chx.length; t++) {
+                        chx[t].checked = false;
+                    }
+            
+            current_ques.innerHTML= this.innerHTML;
+            current_question();
+    });
+}
+    
+    function current_question(){
+        
+        var quest = document.getElementById('question_title');
+        
+        for(var i=0; i<quesnums.length; i++){
+                
+            if(current_ques.innerHTML==quesnums[i].innerHTML){
+                
+                quest.innerHTML=questions[parseInt(current_ques.innerHTML)-1][0];
+                var opt=document.getElementsByClassName('op');
+                for(var z=0;z<opt.length;z++){
+                    opt[z].innerHTML=questions[parseInt(current_ques.innerHTML)-1][z+1];
+                    
+                }
+                
+                quesnums[i].style.backgroundColor="#E5CE1D";
+                quesnums[i].style.borderColor="black";
+                quesnums[i].style.color="black";
+            }
+        }
+                var chk = document.getElementsByName('option');
+                for(var k=0; k<chk.length;k++){
+                    if(chk[k].value==rad_ans[parseInt(current_ques.innerHTML)-1]){
+                        chk[k].checked=true;
+                        break;
+                    }
+                }
+        
+    }
+    
+    function nextFunction(){
+        
+        for(var i=0; i<quesnums.length; i++){
+                
+            if(current_ques.innerHTML==quesnums[i].innerHTML){
+                
+                var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                        if(quesnums[i].style.backgroundColor!="aquamarine"){
+                            quesnums[i].style.backgroundColor="green";
+                            quesnums[i].style.borderColor="black";
+                            quesnums[i].style.color="black";
+                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        }
+                    
+                        break;
+                    }
+                    else if(quesnums[i].style.backgroundColor=="aquamarine"){
+                        break;
+                    }
+                    else{
+                        quesnums[i].style.backgroundColor="#E83C1E";
+                    }
+                }
+                
+                
+                if(quesnums[i+1].innerHTML[0]=="0"){
+                    console.log(quesnums[i].innerHTML[0]);
+                    current_ques.innerHTML = "0"+ String(parseInt(current_ques.innerHTML)+1);
+                    
+                    var chx = document.getElementsByTagName('input');
+                    for (var t=0; t<chx.length; t++) {
+                        chx[t].checked = false;
+                    }
+                    
+                    current_question();
+                }
+                else{
+                    current_ques.innerHTML = parseInt(current_ques.innerHTML)+1;
+                    var chx = document.getElementsByTagName('input');
+                    for (var t=0; t<chx.length; t++) {
+                        chx[t].checked = false;
+                    }
+                    
+                    current_question();
+                }
+                break;
+            } 
+        }
+    }
+    
+    function markFunction(){
+        for(var i=0; i<quesnums.length; i++){
+                
+            if(current_ques.innerHTML==quesnums[i].innerHTML){
+                    quesnums[i].style.backgroundColor="aquamarine";
+                    quesnums[i].style.borderColor="black";
+                    quesnums[i].style.color="black";
+            }
+        }
+        var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        break;
+                    }
+                }
+    }
+    
+    function prevFunction(){
+        for(var i=0; i<quesnums.length; i++){
+                
+            if(current_ques.innerHTML==quesnums[i].innerHTML){
+                if(quesnums[i-1].innerHTML[0]=="0"){
+                    
+                    if(quesnums[i].style.backgroundColor!="aquamarine"){
+                        quesnums[i].style.backgroundColor="#E83C1E";
+                        quesnums[i].style.borderColor="black";
+                        quesnums[i].style.color="black";
+                    }
+                
+                var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        break;
+                    }
+                }
+                    for (var t=0; t<chx.length; t++){
+                        if(chx[t].checked && quesnums[i].style.backgroundColor!="aquamarine"){
+                            quesnums[i].style.backgroundColor="green";
+                            quesnums[i].style.borderColor="black";
+                            quesnums[i].style.color="black";
+                        }
+                    }
+                    
+                    for (var t=0; t<chx.length; t++){
+                        chx[t].checked=false;
+                    }
+                    current_ques.innerHTML = "0"+ String(parseInt(current_ques.innerHTML)-1);
+                    current_question();
+                }
+                else{
+                    if(quesnums[i].style.backgroundColor!="aquamarine"){
+                        quesnums[i].style.backgroundColor="#E83C1E";
+                        quesnums[i].style.borderColor="black";
+                        quesnums[i].style.color="black";
+                    }
+                
+                var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        break;
+                    }
+                }
+                    for (var t=0; t<chx.length; t++){
+                        if(chx[t].checked && quesnums[i].style.backgroundColor!="aquamarine"){
+                            quesnums[i].style.backgroundColor="green";
+                            quesnums[i].style.borderColor="black";
+                            quesnums[i].style.color="black";
+                        }
+                    }
+                    for (var t=0; t<chx.length; t++){
+                        chx[t].checked=false;
+                    }
+                    current_ques.innerHTML = parseInt(current_ques.innerHTML)-1;
+                    current_question();
+                }
+            }
+        }
+    }
+    
+    function submitFunction(){
+        for(var u=0;u<rad_ans.length;u++){
+            alert(rad_ans[u]);
+        }
+        
+    }
+    
+</script>
+
+</html>
