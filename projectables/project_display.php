@@ -10,22 +10,10 @@
 		$tag= array_map('intval', explode(',', $tagss));
 		$c=count($tag);
 		$i=0;
-		
 		$splitted = explode(",", $row['teamdid']);//seperating team ids
-			$c1=count($splitted);
-			
-            $i1=0;
+			$c1=count($splitted);?>
             
-			}
-		else 
-			{ ?>
-				<a href="search.php">Select Project</a>	
-				<?php
-			}
-		
-			
-		?>
-		<html>
+        <html>
 <head>
 <title> Project</title> 
 <link rel="stylesheet" href="stylesheet//proj_show_style.css">
@@ -65,16 +53,17 @@ function myFunction() {
                 <a href="https://github.com/Chinmay/test1.git" style="margin-left: 5px;"><i class="fa fa-github"></i><?php echo "Github Link-".$row['githubLink']; ?></a>
                 <hr>
                 <div class="tags">
-                	<?php
-                	while($i<$c)
-	 				{
-				$query7 = "SELECT * FROM `tags` WHERE id=$tag[$i]";
-				$result7 = mysqli_query($con,$query7);
-				$row7 = mysqli_fetch_array($result7);?>
-				<span class="sp"><?php echo "#".$row7['name']."  "; ?></span>
-				<?php
-				$i++;
-				} ?>
+                    <?php
+                    while($i<$c)
+                    {
+                $query7 = "SELECT * FROM `tags` WHERE id=$tag[$i]";
+                $result7 = mysqli_query($con,$query7);
+                $row7 = mysqli_fetch_array($result7);?>
+                <span class="sp"><?php echo "#".$row7['name']."  "; ?></span>
+                <?php
+                $i++;
+                }
+                $i1=0; ?>
                 </div>
                 
                 <div class="stat">
@@ -88,8 +77,8 @@ function myFunction() {
         
         
 <!---------------------------------------ONE MEMBER BLOCK------------------------->
-		<?php if($c1==1) 
-		{ ?>
+        <?php if($c1==1) 
+        { ?>
         <div id="1mem" >
             <div class="row">
                 
@@ -102,20 +91,20 @@ function myFunction() {
                             <img src="images/face2.jpg" alt="Not Found" onerror=this.src="blank.jpg">
                         </div>
                         <div class="team-content">
-                        	<?php
-                        		
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                            <?php
+                                
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -135,8 +124,8 @@ function myFunction() {
     <?php } ?>
         
 <!------------------------------------TWO MEMBER BLOCK-------------------------------->
-	<?php if($c1==2) 
-		{?>
+    <?php if($c1==2) 
+        {?>
         <div id="2mem" >
             <div class="row">
                 
@@ -150,19 +139,19 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -181,18 +170,18 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -212,7 +201,7 @@ function myFunction() {
        <?php } ?>
 <!-------------------------------------THREE MEMBER BLOCK------------------------------>
 <?php if($c1==3) 
-		{ ?>
+        { ?>
         <div id="3mem" >
             <div class="row">
                 <div class="col-md-4">
@@ -222,20 +211,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -254,20 +243,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -286,20 +275,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -315,7 +304,7 @@ function myFunction() {
         <?php } ?>
 <!-------------------------------------FOUR MEMBER BLOCK----------------------------->    
 <?php if($c1==4) 
-		{    ?>
+        {    ?>
         <div id="4mem" >
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -325,20 +314,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -355,20 +344,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -385,20 +374,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -417,20 +406,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -447,7 +436,7 @@ function myFunction() {
        <?php } ?>
  <!------------------------------FIVE MEMBER BLOCK---------------------------------->
 <?php if($c1==5) 
-		{ ?>
+        { ?>
         <div id="5mem" >
             <div class="row">
                 <div class="col-md-4 ">
@@ -457,20 +446,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -489,20 +478,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                            <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -521,20 +510,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                    
                             ?>
                             
                         <ul class="social">
@@ -561,20 +550,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                            <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -593,20 +582,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -625,7 +614,7 @@ function myFunction() {
       <?php  } ?>
 <!----------------------------------SIX MEMBER BLOCK--------------------------------->
 <?php if($c1==6) 
-		{ ?>
+        { ?>
         <div id="6mem" >
             <div class="row">
                 <div class="col-md-3 ">
@@ -635,20 +624,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -667,20 +656,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -699,20 +688,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                            <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					 
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                     
                             ?>
                             
                         <ul class="social">
@@ -731,20 +720,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -768,20 +757,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                             <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -800,20 +789,20 @@ function myFunction() {
                         </div>
                         <div class="team-content">
                            <?php
-                        		
-             						
-             							$splitted1[$i1]=(int)$splitted[$i1];
-             							$k=$splitted1[$i1];
-                					$query1="SELECT * FROM `users` WHERE `user_id`=$k";
-                					$result1 = mysqli_query($con,$query1);
-                					$row1 = mysqli_fetch_array($result1);?>
-                					<h3 class="nm"><?php echo $row1['username']; ?></h3>
-                            		<span class="post"><?php echo $row1['Branch']; ?></span>
-                        			</div>
-                        			<?php
-                				
-                					$i1++;
-                					  
+                                
+                                    
+                                        $splitted1[$i1]=(int)$splitted[$i1];
+                                        $k=$splitted1[$i1];
+                                    $query1="SELECT * FROM `users` WHERE `user_id`=$k";
+                                    $result1 = mysqli_query($con,$query1);
+                                    $row1 = mysqli_fetch_array($result1);?>
+                                    <h3 class="nm"><?php echo $row1['username']; ?></h3>
+                                    <span class="post"><?php echo $row1['Branch']; ?></span>
+                                    </div>
+                                    <?php
+                                
+                                    $i1++;
+                                      
                             ?>
                             
                         <ul class="social">
@@ -835,3 +824,16 @@ function myFunction() {
    <?php } ?>
 </body>
 </html>
+
+			
+           <?php $i1=0;
+            
+			}
+		else 
+			{ ?>
+				<a href="search.php">Select Project</a>	
+				<?php
+			}
+		
+			
+		
