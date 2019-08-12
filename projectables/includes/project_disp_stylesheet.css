@@ -1,0 +1,126 @@
+.tags {
+    margin-left: 1%;
+    margin-top: 1px;
+    margin-bottom: 5%;
+}
+.sp{
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    padding: 1px;
+    margin: 2px;
+    color: cornflowerblue;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.price {
+  color: grey;
+  font-size: 18px;
+  margin: 1px;
+}
+
+#sm1{
+    height=29px; !important
+}
+.img-fluid{
+    max-width:100%;
+    height:300px;
+}
+
+.search-box {
+ position: absolute;
+ left: 48%;
+ background: dodgerblue;
+ border-radius: 40px;
+ padding: 10px;
+ margin-top: 20px;
+}
+
+.search-box:hover > .search-tag {
+ width: 140px;
+ margin: 10px;
+ border-bottom: 1px solid white;
+}
+
+.search-box:hover > .search-nm {
+ width: 240px;
+ margin: 10px;
+ border-bottom: 1px solid white;
+
+}
+
+.search-box:hover > .search-btn {
+ background: white;
+ color: dodgerblue;
+ margin: 10px;
+}
+
+.search-box:hover > .search-btn:hover{
+    background: dodgerblue;
+    color: white;
+    border: 2px solid white;
+}
+
+.search-box:hover{
+    transform: translateX(-40%);
+}
+
+.search-box:hover > .search-tag:focus{
+    border-color: aqua;
+}
+
+.search-box:hover > .search-nm:focus{
+    border-color: aqua;
+}
+
+.search-btn {
+ float: right;
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background: dodgerblue;
+   
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.4s;
+ color: white;
+ cursor: pointer;
+}
+
+.search-btn > i {
+ font-size: 30px;
+}
+
+.search-tag {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}
+
+.search-nm {
+ border: none;
+ background: none;
+ outline: none;
+ float: left;
+ padding: 0;
+ color: white;
+ font-size: 16px;
+ transition: 0.4s;
+ line-height: 40px;
+ width: 0px;
+ font-weight: bold;
+}
+.container-fluid{
+    margin-top: 30px;
+}
+
