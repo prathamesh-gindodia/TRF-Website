@@ -1,0 +1,425 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="leaderboard_style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+            <div class="row">
+                    <div class="col-xs-12">
+          <div class="list" style="display: inline; float: left;">
+             <!------------------------------------------------HEADER-------------------------------------------------------------->
+            <div class="list__header" style="width: 100%;">
+              <h1 id="title">Leaderboard</h1>
+              <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn" id="butnn" style="font-weight: bold; font-size: 23px;">Quiz Title</button>
+
+                    <div id="myDropdown" class="dropdown-content">
+                        <input type="text" placeholder="Search.." id="myInput" >
+                        <a href="javascript:void(0)">Topic 1</a>
+                        <a href="javascript:void(0)">Topic 2</a>
+                        <a href="javascript:void(0)">Topic 3</a>
+                        <a href="javascript:void(0)">Topic 4</a>
+                        <a href="javascript:void(0)">Topic 5</a>
+                        <a href="javascript:void(0)">Topic 6</a>
+                        <a href="javascript:void(0)">Topic 7</a>
+                      </div>
+                </div>
+            </div>
+              <!-------------------------------------------------TABLE---------------------------------------------------------------->
+            <div class="list__body">
+
+              <table class="list__table">
+                <tr class="first__row" >
+                  <td class="list__cell"><span class="list__value" style="text-align: center;">Rank</span></td>
+                    <td class="list__cell"><span class="list__value" style="text-align: center;">Name</span></td>
+                    <td class="list__cell"><span class="list__value">Department</span></td>
+                    <td class="list__cell"><span class="list__value">Year</span></td>
+                    <td class="list__cell"><span class="list__value">Duration</span></td>
+                    <td class="list__cell"><span class="list__value">Score</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">33</span></td>
+                  <td class="list__cell"><span class="list__value">Current User</span></td>
+                  <td class="list__cell"><span class="list__value">Computer</span></td>
+                    <td class="list__cell"><span class="list__value">First Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">66</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">1</span></td>
+                  <td class="list__cell"><span class="list__value">Prathamesh Gindodia</span></td>
+                  <td class="list__cell"><span class="list__value">Computer</span></td>
+                    <td class="list__cell"><span class="list__value">First Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">100</span></td>
+                </tr>
+                <tr class="list__row" >
+                    <td class="list__cell"><span class="list__value">2</span></td>
+                  <td class="list__cell"><span class="list__value">Ruturaj Deshmukh</span>
+                  <td class="list__cell"><span class="list__value">Computer </span>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span>
+                  <td class="list__cell"><span class="list__value">91</span>
+                  </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">3</span></td>
+                  <td class="list__cell"><span class="list__value">Aniket Ghorpade</span></td>
+                  <td class="list__cell"><span class="list__value">Industrial and Production</span></td>
+                    <td class="list__cell"><span class="list__value">Third Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">87</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">4</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">73</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">5</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">66</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">6</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">51</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">7</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">43</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">8</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">37</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">9</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">23</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">10</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">19</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">11</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">19</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">12</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">19</span></td>
+                </tr>
+                <tr class="list__row" >
+                  <td class="list__cell"><span class="list__value">13</span></td>
+                  <td class="list__cell"><span class="list__value">Batman</span></td>
+                  <td class="list__cell"><span class="list__value">Computer </span></td>
+                    <td class="list__cell"><span class="list__value">Final Year</span></td>
+                  <td class="list__cell"><span class="list__value">00:00:00</span></td>
+                  <td class="list__cell"><span class="list__value">19</span></td>
+                </tr>
+
+              </table>
+                
+            </div>
+              
+          </div>
+             <div class="continput" style="position: relative; display: inline; float: left;margin-top:50px; margin-left: 3% !important;">
+    <h1>DEPARTMENT</h1>
+	<ul>
+        <li>
+			<input checked type="radio" name="1" id="all1">
+			<label for="all1">All</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input  type="radio" name="1" id="comp">
+			<label for="comp">Computer</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1" id="it">
+			<label for="it">IT</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="1" id="entc">
+			<label for="entc">E&amp;TC</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input type="radio" name="1" id="elex">
+			<label for="elex">Electronics</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input type="radio" name="1" id="instru">
+			<label for="instru">Instrumentation</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input type="radio" name="1" id="mech">
+			<label for="mech">Mechanical</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input type="radio" name="1" id="chem">
+			<label for="chem">Chemical</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input type="radio" name="1" id="indus">
+			<label for="indus">Industrial and Production</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        
+	</ul>
+    <br>
+    <hr>
+    <h1>YEAR</h1>
+    <ul>
+        <li>
+			<input checked type="radio" name="2" id="all2">
+			<label for="all2">All</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+		<li>
+			<input type="radio" name="2" id="fy">
+			<label for="fy">First Year</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input  type="radio" name="2" id="sy">
+			<label for="sy">Second Year</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input  type="radio" name="2" id="ty">
+			<label for="ty">Third Year</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+        <li>
+			<input  type="radio" name="2" id="final">
+			<label for="final">Fourth Year</label>
+			<div class="bullet">
+				<div class="line zero"></div>
+				<div class="line one"></div>
+				<div class="line two"></div>
+				<div class="line three"></div>
+				<div class="line four"></div>
+				<div class="line five"></div>
+				<div class="line six"></div>
+				<div class="line seven"></div>
+			</div>
+		</li>
+   </ul>
+</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+              if(!event.target.matches('#myInput')){
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            
+          }
+        }
+
+        function changeFunction(){
+            alert($("this").html());
+        }
+            
+            $('a').click(function(){
+                var quiz_title = $(this).get(0).innerHTML;
+                document.getElementById("butnn").innerHTML=quiz_title;
+            });
+           
+            $('input').on('change', function() {
+                var label = $('label[for="' + $(this).attr('id') + '"]');
+                if(label.length <= 0) {
+                    var parentElem = $(this).parent(),
+                        parentTagName = parentElem.get(0).tagName.toLowerCase();
+
+                    if(parentTagName == "label") {
+                        label = parentElem;
+                    }
+                }
+                alert(label.text())
+            });
+            
+    </script>
+        
+    </body>
+</html>

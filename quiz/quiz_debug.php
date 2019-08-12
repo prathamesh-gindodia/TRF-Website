@@ -1,10 +1,7 @@
-
-<?php
+    <?php
 /*Things to do 
     1)timer
-    2)fix buttons(next, previous)
-    3)add last answer
-    4)set quiz id and user id through sessions also replace the variable in the code
+    2)set quiz id and user id through sessions also replace the variable in the code
     */
     require('../cms/includes/db.php'); 
     session_start();
@@ -66,7 +63,8 @@
                     <button type="submit" id="next" onclick="nextFunction()">Next</button>
                 </div>
                 
-                <form id="sampleForm" name="sampleForm" method="post" action="check.php">
+                <div>
+                   <form id="sampleForm" name="sampleForm" method="post" action="check.php">
                     <input type="hidden" name="total" id="total" value="">  
                 <div>
                     <button type="submit" name="submit" class="submit_btn" onclick="submitFunction();">
@@ -74,6 +72,7 @@
                     </button>
                 </div>
             </form>
+                </div>
             </div>
             
             <div class="col-md-4">
@@ -84,25 +83,27 @@
                 $qry3 = "SELECT `quizId`, `questionId`, `questions`, `optionA`, `optionB`, `optionC`, `optionD`, `correctOption` FROM `quizquestion` WHERE `quizId` = $quizId"; 
                 $run3 = mysqli_query($connection, $qry);
                 $n=mysqli_num_rows($run3);
-                $z=2;
+                $z=10;
                 ?>
-
                 <div class="num">
-                    <button class="quesno" type="button" >01</button>
+                    <button class="quesno" type="button" style="display:none;">01</button>
+                    <button class="quesno" type="button" style="display:none;">02</button>
+                    <button class="quesno" type="button" style="display:none;">03</button>
+                    <button class="quesno" type="button" style="display:none;">04</button>
+                    <button class="quesno" type="button" style="display:none;">05</button>
+                    <button class="quesno" type="button" style="display:none;">06</button>
+                    <button class="quesno" type="button" style="display:none;">07</button>
+                    <button class="quesno" type="button" style="display:none;">08</button>
+                    <button class="quesno" type="button" style="display:none;">09</button>
                     <?php while($z<=$n){ ?>
-                    <button class="quesno" type="button" ><?php if($z<10)
-                        {   echo "0".$z;
-                            }
-                    else
-                        {echo $z;}
+                    <button class="quesno" type="button" ><?php 
+                        echo $z;
                          $z=$z+1; ?> </button>
                              
                          
                      <?php }       //while closes  ?> 
-                            
-                         
-
-
+                    
+                    
                 </div>
                 
             </div>
@@ -113,16 +114,16 @@
         
     </div>
 </body>
-
     
-<script><?php 
+<script>
+    <?php 
    $quizId=0;
     $qry = "SELECT `quizId`, `questionId`, `questions`, `optionA`, `optionB`, `optionC`, `optionD`, `correctOption` FROM `quizquestion` WHERE `quizId` = $quizId"; 
  $run = mysqli_query($connection, $qry);
  $nn = mysqli_num_rows($run);
  $nnc=1;
  ?>
- 
+  
 
     var questions = [
     <?php while($nnc<$nn) { 
@@ -133,7 +134,6 @@
      ?>
      [ " <?php echo $data['questions']; ?><script>", " <?php echo $data['optionA']; ?> ", " <?php echo $data['optionB']; ?> ", "<?php echo $data['optionC']; ?>","<?php echo $data['optionD']; ?>"]
 ];
-
     
     var rad_ans = [];
     for(var r=0; r<20; r++){
@@ -141,6 +141,10 @@
     }
     var quesnums = document.getElementsByClassName("quesno");
     var current_ques = document.getElementById("question_num");
+    var numrows = <?php echo $n; ?> ;
+    for(var tp=0; tp<numrows; tp++){
+       quesnums[tp].style.display="inline";
+   }
     
     
     for (var i=0; i<quesnums.length; i++){
@@ -216,7 +220,9 @@
     }
     
     function nextFunction(){
-        
+        if(current_ques.innerHTML==numrows){
+                return(0);
+           }
         for(var i=0; i<quesnums.length; i++){
                 
             if(current_ques.innerHTML==quesnums[i].innerHTML){
@@ -243,26 +249,16 @@
                 }
                 
                 
-                if(quesnums[i+1].innerHTML[0]=="0"){
                     console.log(quesnums[i].innerHTML[0]);
-                    current_ques.innerHTML = "0"+ String(parseInt(current_ques.innerHTML)+1);
+                    //current_ques.innerHTML = "0"+ String(parseInt(current_ques.innerHTML)+1);
+                    current_ques.innerHTML = quesnums[i+1].innerHTML;
                     
                     var chx = document.getElementsByTagName('input');
                     for (var t=0; t<chx.length; t++) {
                         chx[t].checked = false;
                     }
-                    
                     current_question();
-                }
-                else{
-                    current_ques.innerHTML = parseInt(current_ques.innerHTML)+1;
-                    var chx = document.getElementsByTagName('input');
-                    for (var t=0; t<chx.length; t++) {
-                        chx[t].checked = false;
-                    }
-                    
-                    current_question();
-                }
+                
                 break;
             } 
         }
@@ -288,10 +284,13 @@
     }
     
     function prevFunction(){
+        if(current_ques.innerHTML=="01"){
+            return(0);
+        }
         for(var i=0; i<quesnums.length; i++){
                 
             if(current_ques.innerHTML==quesnums[i].innerHTML){
-                if(quesnums[i-1].innerHTML[0]=="0"){
+                if(true){
                     
                     if(quesnums[i].style.backgroundColor!="aquamarine"){
                         quesnums[i].style.backgroundColor="#E83C1E";
@@ -318,42 +317,26 @@
                     for (var t=0; t<chx.length; t++){
                         chx[t].checked=false;
                     }
-                    current_ques.innerHTML = "0"+ String(parseInt(current_ques.innerHTML)-1);
-                    current_question();
-                }
-                else{
-                    if(quesnums[i].style.backgroundColor!="aquamarine"){
-                        quesnums[i].style.backgroundColor="#E83C1E";
-                        quesnums[i].style.borderColor="black";
-                        quesnums[i].style.color="black";
-                    }
-                
-                var chx = document.getElementsByName('option');
-                for (var t=0; t<chx.length; t++) {
-                    
-                    if (chx[t].checked) {
-                            rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
-                        break;
-                    }
-                }
-                    for (var t=0; t<chx.length; t++){
-                        if(chx[t].checked && quesnums[i].style.backgroundColor!="aquamarine"){
-                            quesnums[i].style.backgroundColor="green";
-                            quesnums[i].style.borderColor="black";
-                            quesnums[i].style.color="black";
-                        }
-                    }
-                    for (var t=0; t<chx.length; t++){
-                        chx[t].checked=false;
-                    }
-                    current_ques.innerHTML = parseInt(current_ques.innerHTML)-1;
+                    current_ques.innerHTML = quesnums[i-1].innerHTML;
                     current_question();
                 }
             }
         }
     }
-   
+    
     function submitFunction(){
+        
+        
+        var chx = document.getElementsByName('option');
+                for (var t=0; t<chx.length; t++) {
+                    
+                    if (chx[t].checked) {
+                        rad_ans[parseInt(current_ques.innerHTML)-1]=chx[t].value;
+                        break;
+                    }
+                }
+    
+        
         var s="";
         for(var u=0;u<rad_ans.length;u++){
             s=s+rad_ans[u]+",";
@@ -369,16 +352,9 @@
         document.sampleForm.total.value=s;
         document.forms["sampleForm"].submit();
 
-
-
-    }
         
-
-    
-
+    }
     
 </script>
-
-
 
 </html>
