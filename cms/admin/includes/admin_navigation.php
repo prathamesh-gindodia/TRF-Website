@@ -86,7 +86,14 @@ if(isset($_SESSION['username'])) {
                             <li>
                                 <a href="./quiz_add.php">Add Quizes</a>
                             </li>
+                            <li>
+                                <a href="./leaderboard3.php">Leaderboard</a>
+                            </li>
+                            <li>
+                                <a href="./quiz_mainpage1.php">Give Quiz</a>
+                            </li>
                         </ul>
+
                     </li>
 					<li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#projectTable_dropdown"><i class="fa fa-fw fa-arrows-v"></i>Project <i class="fa fa-fw fa-caret-down"></i></a>

@@ -9,17 +9,17 @@ $row = mysqli_num_rows($run);
 $count = 0;
 ?>
 	<div id="wrapper">
-       
 
-        
-  
+
+
+
 
         <!-- Navigation -->
- 
+
         <?php include "includes/admin_navigation.php" ?>
-        
-        
-    
+
+
+
 
 <div id="page-wrapper">
 
@@ -38,13 +38,13 @@ $count = 0;
 			<!--     Add ur code here         -->
 
             <div class="col-xs-12">
-				
-				
+
+
 				<div class="form-group pull-center col-md-5">
-    <input type="text" class="search form-control" placeholder="Search for Quizes">
+    <input type="text" class="search form-control" placeholder="Search for Projects">
 	</div>
 	<div class="form-group pull-center">
-	<a href="quiz_add.php"> <button type="button" name="add" id="add" class="btn btn-success">Add New</button> </a> 
+	<a href="addProject.php"> <button type="button" name="add" id="add" class="btn btn-success">Add New</button> </a>
 </div>
 <span class="counter pull-right"></span>
 <table class="table table-hover table-bordered results">
@@ -67,7 +67,7 @@ $count = 0;
 	  <tbody>
 		<?php
   while($data = mysqli_fetch_assoc($run))
-	{ 
+	{
 		$count++;
 		?>
 		<tr>
@@ -78,13 +78,13 @@ $count = 0;
 		  <td><?php echo $data['status'];?></td>
 		  <td><?php echo $data['tags'];?></td>
 		  <td><a class='btn btn-primary' href="#">More Details</a></td>
-		  <td><a class='btn btn-info' href="editQuiz.php?sid=<?php echo $data['id']; ?>">Edit</a></td>
+		  <td><a class='btn btn-info' href="update_project.php?sid=<?php echo $data['id']; ?>">Edit</a></td>
 		  <td><a class='btn btn-danger' href="deleteProject.php?sid=<?php echo $data['id']; ?>">Delete</a></td>
 		</tr>
 <?php } ?>
   </tbody>
 </table>
-				
+
 
             </div>
         <!-- /.row -->
@@ -93,7 +93,7 @@ $count = 0;
     <!-- /.container-fluid -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-  
+
 
     <script  src="js/script-search.js"></script>
 
@@ -102,10 +102,10 @@ $count = 0;
 
 
 
-  
-        
-     
-        
+
+
+
+
         <!-- /#page-wrapper -->
-        
+
     <?php include "includes/admin_footer.php" ?>
