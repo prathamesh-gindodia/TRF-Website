@@ -281,132 +281,72 @@
         </div>
                     <div class="container" style="max-width: 1300 !important;  position: relative;">
                         <div class="row">
+                          <?php
+                          $qqq = "SELECT * FROM `project` ORDER BY `date` DESC LIMIT 4";
+                          $rrr = mysqli_query($con,$qqq);
+                          $o=1;
+                          while($row = mysqli_fetch_array($rrr))
+                          {
+                            $o++;
+                            if($o==4)
+                              {?>
+                                <div class="row">
+                              <?php } ?>
                             <div class="col-md 6">
                                 <div class="card">
                                     <a class="img-card" href="javascript:void(0)">
-                                    <img src="robo.jpg" />
+                                    <img src="<?php echo $row['photo'];?>" />
                                   </a>
                                     <div class="card-content">
                                         <h4 class="card-title">
-                                            <a href="javascript:void(0)"> Some Project Title 1
+                                            <a href="javascript:void(0)"> <?php echo $row['title']; ?>
                                           </a>
                                         </h4>
-                                        <h5 style="color: darkgray;">11/12/2013</h5>
+                                        <h5 style="color: darkgray;"></h5><?php
+                                        echo $row['date'];
+                                        ?></h5>
                                         <p class="">
-                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
+                                            <?php echo $row['description'] ?>
                                         </p>
                                         <div class="tags">
-                                            <span class="sp">#Artificial Intelligence</span>
-                                            <span class="sp">#Machine Learning</span>
-                                            <span class="sp">#Android</span>
+                                          <?php 
+                                          $tagss=$row['tags'];
+                                          $tag= array_map('intval', explode(',', $tagss));
+                                          $c=count($tag);
+                                          $i=0;
+                                          while($i<$c)
+                                              {
+                                          $query7 = "SELECT * FROM `tags` WHERE id=$tag[$i]";
+                                          $result7 = mysqli_query($con,$query7);
+                                          $row7 = mysqli_fetch_array($result7);?>
+                                          <span class="sp"><?php echo "#".$row7['name']."  "; ?></span>
+                                          <?php
+                                          $i++;
+                                          }
+                                          ?>
+                                            <!-- <span class="sp">#The_Robotics_Forum</span>
                                             <span class="sp">#Robotics</span>
-                                            <span class="sp">#Web Development</span>
-                                            <span class="sp">#Front End</span>
-                                            <span class="sp">#Back End</span>
+                                            <span class="sp">#Robobot</span>
+                                            <span class="sp">#Vishwakarma_Institue_of_Techonology</span>
+                                            <span class="sp">#Pune</span>
+                                            <span class="sp"></span>
+                                            <span class="sp"></span> -->
                                         </div>
                                     </div>
                                     <div class="card-read-more">
-                                        <a href="javascript:void(0)" class="btn btn-link btn-block">
+                                        <a href="project_display.php?link=<?php echo $row['title'];?>" class="btn btn-link btn-block">
                                             Read More
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md 6">
-                                <div class="card">
-                                    <a class="img-card" href="javascript:void(0)">
-                                    <img src="robo2.jpg" />
-                                  </a>
-                                    <div class="card-content">
-                                        <h4 class="card-title">
-                                            <a href="javascript:void(0)">Some Project Title 2
-                                          </a>
-                                        </h4>
-                                        <h5 style="color: darkgray;">11/12/2013</h5>
-                                        <p class="">
-                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-                                        </p>
-                                        <div class="tags">
-                                            <span class="sp">#Artificial Intelligence</span>
-                                            <span class="sp">#Machine Learning</span>
-                                            <span class="sp">#Android</span>
-                                            <span class="sp">#Robotics</span>
-                                            <span class="sp">#Web Development</span>
-                                            <span class="sp">#Front End</span>
-                                            <span class="sp">#Back End</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-read-more">
-                                        <a href="javascript:void(0)" class="btn btn-link btn-block">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md 6">
-                                <div class="card">
-                                    <a class="img-card" href="javascript:void(0)">
-                                    <img src="robo.jpg" />
-                                  </a>
-                                    <div class="card-content">
-                                        <h4 class="card-title">
-                                            <a href="javascript:void(0)"> Some Project Title 1
-                                          </a>
-                                        </h4>
-                                        <h5 style="color: darkgray;">11/12/2013</h5>
-                                        <p class="">
-                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-                                        </p>
-                                        <div class="tags">
-                                            <span class="sp">#Artificial Intelligence</span>
-                                            <span class="sp">#Machine Learning</span>
-                                            <span class="sp">#Android</span>
-                                            <span class="sp">#Robotics</span>
-                                            <span class="sp">#Web Development</span>
-                                            <span class="sp">#Front End</span>
-                                            <span class="sp">#Back End</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-read-more">
-                                        <a href="javascript:void(0)" class="btn btn-link btn-block">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md 6">
-                                <div class="card">
-                                    <a class="img-card" href="javascript:void(0)">
-                                    <img src="robo2.jpg" />
-                                  </a>
-                                    <div class="card-content">
-                                        <h4 class="card-title">
-                                            <a href="javascript:void(0)">Some Project Title 2
-                                          </a>
-                                        </h4>
-                                        <h5 style="color: darkgray;">11/12/2013</h5>
-                                        <p class="">
-                                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-                                        </p>
-                                        <div class="tags">
-                                            <span class="sp">#Artificial Intelligence</span>
-                                            <span class="sp">#Machine Learning</span>
-                                            <span class="sp">#Android</span>
-                                            <span class="sp">#Robotics</span>
-                                            <span class="sp">#Web Development</span>
-                                            <span class="sp">#Front End</span>
-                                            <span class="sp">#Back End</span>
-                                        </div>
-                                    </div>
-                                    <div class="card-read-more">
-                                        <a href="javascript:void(0)" class="btn btn-link btn-block">
-                                            Read More
-                                        </a>
-                                    </div>
-                                </div>
+
+                          <?php }
+                           ?>
+                            
+                            
+                      
+                            
                             </div>
                         </div>
                     </div>

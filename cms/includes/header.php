@@ -1,5 +1,8 @@
 <?php session_start(); ?>
-<?php include "admin/functions.php"; ?>
+<?php
+ include 'functions.php';
+ //include("../includes/db.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 

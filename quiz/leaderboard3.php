@@ -1,7 +1,6 @@
 <?php
-  ///////Quiz id can only be an integer
+  require('../cms/includes/header.php'); 
   require('../cms/includes/db.php'); 
-  session_start();
 ?>
 
 
@@ -95,7 +94,7 @@
           $ranking = 1;?>
                           <tr class="list__row" >
                   <td class="list__cell"><span class="list__value">33</span></td>
-                  <td class="list__cell"><span class="list__value">Current User</span></td>
+                  <td class="list__cell"><span class="list__value"><?php $_SESSION['user_id']?></span></td>
                   <td class="list__cell"><span class="list__value">Computer</span></td>
                     <td class="list__cell"><span class="list__value">First Year</span></td>
                   <td class="list__cell"><span class="list__value">66</span></td>
@@ -204,7 +203,7 @@
           $ranking = 1;?>
           <tr class="list__row" >
                   <td class="list__cell"><span class="list__value">33</span></td>
-                  <td class="list__cell"><span class="list__value">Current User</span></td>
+                  <td class="list__cell"><span class="list__value">Current Userhi</span></td>
                   <td class="list__cell"><span class="list__value">Computer</span></td>
                     <td class="list__cell"><span class="list__value">First Year</span></td>
                   <td class="list__cell"><span class="list__value">66</span></td>
@@ -262,7 +261,7 @@ else if(!empty($_POST['dep']) AND empty($_POST['year']))
           $ranking = 1;?>
           <tr class="list__row" >
                   <td class="list__cell"><span class="list__value">33</span></td>
-                  <td class="list__cell"><span class="list__value">Current User</span></td>
+                  <td class="list__cell"><span class="list__value">Current Usehikfcsknr</span></td>
                   <td class="list__cell"><span class="list__value">Computer</span></td>
                     <td class="list__cell"><span class="list__value">First Year</span></td>
                   <td class="list__cell"><span class="list__value">66</span></td>
