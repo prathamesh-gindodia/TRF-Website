@@ -1,7 +1,7 @@
 {
     "name": "edwin/cms",
     "require": {
-        "phpmailer/phpmailer": "^5.2",
+        "phpmailer/phpmailer": "^6.1",
         "pusher/pusher-php-server": "^3.0",
         "vlucas/phpdotenv": "^2.4"
     },
